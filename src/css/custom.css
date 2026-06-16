@@ -1,0 +1,162 @@
+:root {
+  --ifm-color-primary: #29465f;
+  --ifm-color-primary-dark: #21394d;
+  --ifm-color-primary-darker: #1b3144;
+  --ifm-color-primary-darkest: #142636;
+  --ifm-color-primary-light: #3b5d7a;
+  --ifm-color-primary-lighter: #52738f;
+  --ifm-color-primary-lightest: #7896ad;
+  --ifm-background-color: #fbfaf7;
+  --ifm-font-color-base: #1e252b;
+  --ifm-heading-color: #17212b;
+  --ifm-navbar-background-color: rgba(251, 250, 247, 0.94);
+  --ifm-footer-background-color: #f0eee8;
+  --ifm-code-font-size: 95%;
+  --ifm-global-radius: 4px;
+  --book-accent: #b75f38;
+  --book-line: #ded9cf;
+  --book-muted: #65717c;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #9fc1dc;
+  --ifm-color-primary-dark: #7da8ca;
+  --ifm-color-primary-darker: #6596be;
+  --ifm-color-primary-darkest: #477c9f;
+  --ifm-color-primary-light: #bdd7ea;
+  --ifm-color-primary-lighter: #d5e7f3;
+  --ifm-color-primary-lightest: #edf6fb;
+  --ifm-background-color: #11181f;
+  --ifm-font-color-base: #e8edf1;
+  --ifm-heading-color: #f5f7f9;
+  --ifm-navbar-background-color: rgba(17, 24, 31, 0.94);
+  --ifm-footer-background-color: #0c1218;
+  --book-accent: #d48a63;
+  --book-line: #263543;
+  --book-muted: #a8b3bd;
+}
+
+body {
+  font-family:
+    'Segoe UI',
+    'Noto Sans',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--book-line);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+.navbar__title {
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--book-line) !important;
+}
+
+.menu {
+  font-size: 0.93rem;
+}
+
+.menu__link {
+  border-radius: 4px;
+  line-height: 1.35;
+}
+
+.menu__link--active {
+  font-weight: 650;
+}
+
+.theme-doc-markdown {
+  max-width: 820px;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.theme-doc-markdown h1 {
+  font-size: 2.35rem;
+  line-height: 1.08;
+  margin-bottom: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+.theme-doc-markdown h2 {
+  border-top: 1px solid var(--book-line);
+  font-size: 1.45rem;
+  margin-top: 2.4rem;
+  padding-top: 1.2rem;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.theme-doc-markdown blockquote {
+  border-left: 3px solid var(--book-accent);
+  color: var(--ifm-font-color-base);
+  font-size: 1.05rem;
+}
+
+.book-lead {
+  color: var(--book-muted);
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+.book-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  margin: 2rem 0;
+}
+
+.book-card {
+  border: 1px solid var(--book-line);
+  border-radius: 6px;
+  min-width: 0;
+  padding: 1rem;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.book-card:hover {
+  border-color: var(--book-accent);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.book-card strong {
+  color: var(--ifm-heading-color);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.book-card span {
+  color: var(--book-muted);
+  display: block;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .theme-doc-markdown h1 {
+    font-size: 1.85rem;
+  }
+
+  .theme-doc-markdown p,
+  .theme-doc-markdown li {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+}

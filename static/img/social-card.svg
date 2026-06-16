@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fbfaf7"/>
+  <rect x="64" y="64" width="1072" height="502" rx="18" fill="#f0eee8" stroke="#ded9cf"/>
+  <text x="120" y="160" fill="#b75f38" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">coMind</text>
+  <text x="120" y="270" fill="#17212b" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700">Путь компании</text>
+  <text x="120" y="360" fill="#17212b" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700">к AI-Native</text>
+  <text x="120" y="450" fill="#65717c" font-family="Segoe UI, Arial, sans-serif" font-size="34">Интерактивная книга о новой операционной модели</text>
+</svg>

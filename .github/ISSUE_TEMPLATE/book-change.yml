@@ -1,0 +1,26 @@
+name: Предложить правку книги
+description: Исправление, уточнение или новый фрагмент для книги
+title: "[book]: "
+labels: ["book-change"]
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Где нужна правка
+      description: Укажите раздел, главу, страницу сайта или фрагмент текста.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Что изменить
+      description: Опишите предлагаемое изменение.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Почему это важно
+      description: Укажите, какую неточность или проблему решает правка.
+    validations:
+      required: true
