@@ -2,13 +2,31 @@
 title: "Путь компании к AI-Native"
 sidebar_label: "Начало"
 slug: /
+hide_title: true
+description: "Интерактивная версия книги coMind о переходе компании к AI-Native операционной модели."
 ---
 
 import Link from '@docusaurus/Link';
+import bookCover from '@site/static/img/book-cover.png';
 
-<p className="book-lead">
-  Интерактивная версия книги coMind о том, как руководителю превратить эксперименты с ИИ в новую операционную модель.
-</p>
+<section className="book-hero">
+  <img className="book-hero__image" src={bookCover} alt="" aria-hidden="true" />
+  <div className="book-hero__content">
+    <div className="book-kicker">coMind / AI-Native / Playbook edition</div>
+    <h1>Путь компании к AI-Native</h1>
+    <p>
+      Практическая книга о том, как руководителю превратить эксперименты с ИИ в новую операционную модель.
+    </p>
+    <div className="book-hero__actions">
+      <Link className="book-button book-button--primary" to="/introduction/why-now">
+        <span>Начать чтение</span>
+      </Link>
+      <Link className="book-button book-button--secondary" to="/appendices/a-readiness-checklist">
+        <span>Перейти к чек-листам</span>
+      </Link>
+    </div>
+  </div>
+</section>
 
 <div className="book-grid">
   <Link className="book-card" to="/introduction/why-now">

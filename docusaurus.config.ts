@@ -2,13 +2,16 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const siteUrl = process.env.SITE_URL ?? 'https://book.my.comind.space';
+const baseUrl = process.env.BASE_URL ?? '/';
+
 const config: Config = {
   title: 'Путь компании к AI-Native',
   tagline: 'Интерактивная книга о переходе к новой операционной модели',
   favicon: 'img/favicon.svg',
 
-  url: 'https://comind-space.github.io',
-  baseUrl: '/ai-native-book/',
+  url: siteUrl,
+  baseUrl,
 
   organizationName: 'coMind-space',
   projectName: 'ai-native-book',

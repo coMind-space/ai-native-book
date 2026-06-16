@@ -2,7 +2,9 @@
 
 Интерактивная версия книги coMind о переходе компании к AI-Native операционной модели.
 
-Публичный сайт после деплоя: https://comind-space.github.io/ai-native-book/
+Публичный сайт: https://book.my.comind.space/
+
+Резервная публикация через GitHub Pages: https://comind-space.github.io/ai-native-book/
 
 ## Локальный запуск
 

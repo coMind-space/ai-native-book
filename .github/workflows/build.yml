@@ -35,6 +35,9 @@ jobs:
         run: npm run typecheck
 
       - name: Build
+        env:
+          SITE_URL: https://comind-space.github.io
+          BASE_URL: /ai-native-book/
         run: npm run build
 
       - name: Configure Pages
