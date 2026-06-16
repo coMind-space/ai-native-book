@@ -57,6 +57,18 @@ body {
   letter-spacing: 0;
 }
 
+.navbar__logo {
+  height: 32px;
+  width: 124px;
+}
+
+.navbar__logo img {
+  border-radius: 0;
+  height: 32px;
+  object-fit: contain;
+  width: 124px;
+}
+
 .theme-doc-sidebar-container {
   border-right: 1px solid var(--book-line) !important;
 }

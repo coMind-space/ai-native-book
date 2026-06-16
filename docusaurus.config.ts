@@ -50,7 +50,7 @@ const config: Config = {
       title: 'AI-Native Book',
       logo: {
         alt: 'coMind',
-        src: 'img/favicon.svg',
+        src: 'img/logo-comind-wordmark.png',
       },
       items: [
         {
