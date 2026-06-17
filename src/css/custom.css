@@ -421,6 +421,15 @@ b,
   padding: 0.9rem 1rem;
 }
 
+.theme-doc-markdown blockquote p {
+  line-height: inherit;
+  margin: 0;
+}
+
+.theme-doc-markdown blockquote p + p {
+  margin-top: 0.55rem;
+}
+
 .theme-doc-markdown table {
   border: 1px solid var(--book-line);
   display: table;
