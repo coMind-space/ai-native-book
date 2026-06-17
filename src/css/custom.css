@@ -300,7 +300,7 @@ b,
 .theme-doc-markdown p,
 .theme-doc-markdown li {
   font-size: 1.04rem;
-  line-height: 1.76;
+  line-height: 1.7;
 }
 
 .theme-doc-markdown p {
@@ -876,7 +876,7 @@ b,
   .theme-doc-markdown p,
   .theme-doc-markdown li {
     font-size: 1rem;
-    line-height: 1.68;
+    line-height: 1.66;
     max-width: calc(100vw - 2rem);
   }
 
