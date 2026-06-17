@@ -92,21 +92,22 @@ b,
 
 .navbar__title {
   color: var(--book-ink);
-  font-size: 0.98rem;
+  font-size: 1rem;
   letter-spacing: 0;
+  white-space: normal;
 }
 
 .navbar__logo {
-  height: 18px;
-  margin-right: 0.55rem;
-  width: 70px;
+  height: 24px;
+  margin-right: 0.6rem;
+  width: 24px;
 }
 
 .navbar__logo img {
-  border-radius: 0;
-  height: 18px;
+  border-radius: 999px;
+  height: 24px;
   object-fit: contain;
-  width: 70px;
+  width: 24px;
 }
 
 .navbar__item.navbar__link {
@@ -166,7 +167,13 @@ b,
 }
 
 [data-theme='dark'] .menu__link--active {
-  color: #101116;
+  background: #f2ad95;
+  color: #111114;
+}
+
+[data-theme='dark'] .menu__link--active:hover {
+  background: #ffd4c4;
+  color: #111114;
 }
 
 .menu__link--sublist-caret::after {
@@ -197,6 +204,11 @@ b,
 }
 
 .theme-doc-markdown {
+  font-family:
+    Georgia,
+    Cambria,
+    'Times New Roman',
+    serif;
   max-width: 850px;
   min-width: 0;
   overflow-wrap: break-word;
@@ -254,9 +266,34 @@ b,
   line-height: 1.76;
 }
 
+.theme-doc-markdown p {
+  margin: 0.85rem 0;
+}
+
+.theme-doc-markdown p + p {
+  margin-top: 0.72rem;
+}
+
 .theme-doc-markdown a {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
+}
+
+.theme-doc-markdown img {
+  background: var(--book-paper-warm);
+  border: 1px solid var(--book-line);
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  margin: 1.2rem 0 0.55rem;
+  width: 100%;
+}
+
+.theme-doc-markdown img + p {
+  color: var(--book-muted);
+  font-size: 0.94rem;
+  line-height: 1.52;
+  margin-top: 0;
 }
 
 .theme-doc-markdown blockquote {
@@ -272,10 +309,26 @@ b,
 
 .theme-doc-markdown table {
   border: 1px solid var(--book-line);
+  font-family:
+    'Segoe UI Variable',
+    'Aptos',
+    'Noto Sans',
+    'Segoe UI',
+    sans-serif;
+  font-size: 0.92rem;
+  margin: 1rem 0 1.4rem;
 }
 
 .theme-doc-markdown th {
   background: var(--book-paper-warm);
+  color: var(--book-ink);
+  font-weight: 760;
+}
+
+.theme-doc-markdown td,
+.theme-doc-markdown th {
+  border-color: var(--book-line);
+  vertical-align: top;
 }
 
 .book-lead {
@@ -291,6 +344,12 @@ b,
   box-sizing: border-box;
   color: var(--book-ink);
   display: grid;
+  font-family:
+    'Segoe UI Variable',
+    'Aptos',
+    'Noto Sans',
+    'Segoe UI',
+    sans-serif;
   grid-template-columns: minmax(0, 1.08fr) minmax(240px, 0.72fr);
   min-height: 470px;
   overflow: hidden;
@@ -394,6 +453,16 @@ b,
   color: var(--book-cream);
 }
 
+[data-theme='dark'] .book-button--primary {
+  background: var(--book-cream);
+  border-color: var(--book-cream);
+  color: #111114;
+}
+
+[data-theme='dark'] .book-button--primary:hover {
+  color: #111114;
+}
+
 .book-button--secondary {
   background: transparent;
   color: var(--book-ink);
@@ -434,6 +503,12 @@ b,
 
 .book-grid {
   display: grid;
+  font-family:
+    'Segoe UI Variable',
+    'Aptos',
+    'Noto Sans',
+    'Segoe UI',
+    sans-serif;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   margin: 2rem 0 2.4rem;
@@ -507,6 +582,24 @@ b,
   overflow-wrap: anywhere;
 }
 
+[data-theme='dark'] .book-card {
+  background: #181719;
+  border-color: #3c3632;
+}
+
+[data-theme='dark'] .book-card:hover {
+  background: #211f20;
+  border-color: #f2ad95;
+}
+
+[data-theme='dark'] .book-card__index {
+  color: #f2ad95;
+}
+
+[data-theme='dark'] .book-card span:not(.book-card__index) {
+  color: #cfc4ba;
+}
+
 .pagination-nav__link {
   border-color: var(--book-line);
   border-radius: 8px;
@@ -518,6 +611,31 @@ b,
 
 .footer {
   border-top: 1px solid var(--book-line);
+  font-size: 0.92rem;
+  padding: 1.75rem 0;
+}
+
+.footer__links {
+  margin-bottom: 1.2rem;
+}
+
+.footer__title {
+  color: var(--book-ink);
+  font-weight: 760;
+}
+
+.footer__item {
+  line-height: 1.45;
+}
+
+.footer__copyright {
+  color: var(--book-muted);
+  font-size: 0.86rem;
+}
+
+.footer a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 @media (max-width: 996px) {
@@ -546,11 +664,16 @@ b,
 
 @media (max-width: 760px) {
   .navbar__title {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+    line-height: 1.18;
+    max-width: 220px;
   }
 
   .theme-doc-markdown {
+    box-sizing: border-box;
     max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
     width: auto;
   }
 
@@ -614,15 +737,22 @@ b,
 
   .theme-doc-markdown h1 {
     font-size: 2rem;
+    max-width: calc(100vw - 2rem);
   }
 
   .theme-doc-markdown h2 {
     font-size: 1.42rem;
+    max-width: calc(100vw - 2rem);
   }
 
   .theme-doc-markdown p,
   .theme-doc-markdown li {
     font-size: 1rem;
     line-height: 1.68;
+    max-width: calc(100vw - 2rem);
+  }
+
+  .theme-doc-markdown img {
+    max-width: calc(100vw - 2rem);
   }
 }

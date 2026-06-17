@@ -3,8 +3,6 @@ title: "Приложение J. Как организовать хранилищ
 sidebar_label: "Приложение J"
 ---
 
-Как организовать хранилище skills в Git
-
 Если skills становятся активом компании, их нельзя хранить в личных заметках, чатах и случайных документах.
 
 Их нужно хранить так же дисциплинированно, как код, регламенты или архитектурные решения.
@@ -39,11 +37,11 @@ review через PR или MR;
 
 Рабочая формула:
 
-любой сотрудник может создать skill
-
-skill master помогает оформить и проверить владелец процесса подтверждает смысл
-
-review проверяет качество, безопасность и source of truth после merge skill становится доступен команде
+1. Любой сотрудник может создать skill.
+2. Skill master помогает оформить и проверить.
+3. Владелец процесса подтверждает смысл.
+4. Review проверяет качество, безопасность и source of truth.
+5. После merge skill становится доступен команде.
 
 Зачем Git, если сотрудники не разработчики
 
@@ -81,49 +79,54 @@ review проверяет качество, безопасность и source o
 
 Пример структуры:
 
+```text
 company-ai-skills/
-
-README.md skills/
-
-sales/ proposal-draft/
-
-SKILL.md examples/
-
-evals/ client-request-triage/
-
-SKILL.md delivery/ project-status-summary/
-
-SKILL.md meeting-summary/
-
-SKILL.md engineering/
-
-task-context-bootstrap/ SKILL.md
-
-mr-review/ SKILL.md
-
-finance/ invoice-draft/ SKILL.md
-
-legal/ contract-review/
-
-SKILL.md templates/
-
-skill-template.md eval-template.md
-
-review-checklist.md governance/
-
-roles.md review-policy.md publishing-policy.md
-
-deprecation-policy.md registry/
-
-skills-index.yaml
+  README.md
+  skills/
+    sales/
+      proposal-draft/
+        SKILL.md
+        examples/
+        evals/
+      client-request-triage/
+        SKILL.md
+    delivery/
+      project-status-summary/
+        SKILL.md
+      meeting-summary/
+        SKILL.md
+    engineering/
+      task-context-bootstrap/
+        SKILL.md
+      mr-review/
+        SKILL.md
+    finance/
+      invoice-draft/
+        SKILL.md
+    legal/
+      contract-review/
+        SKILL.md
+  templates/
+    skill-template.md
+    eval-template.md
+    review-checklist.md
+  governance/
+    roles.md
+    review-policy.md
+    publishing-policy.md
+    deprecation-policy.md
+  registry/
+    skills-index.yaml
+```
 
 В малой компании структура может быть проще:
 
+```text
 skills/
-
-proposal-draft/SKILL.md meeting-summary/SKILL.md
-
-contract-review/SKILL.md
+  proposal-draft/SKILL.md
+  meeting-summary/SKILL.md
+  contract-review/SKILL.md
+```
 
 Но даже в простом варианте у каждого skill должны быть владелец, версия и правила качества.
 
@@ -131,13 +134,16 @@ contract-review/SKILL.md
 
 Минимальный состав:
 
+```text
 skill-name/
-
-SKILL.md examples/
-
-good-result.md bad-result.md evals/
-
-cases.md README.md
+  SKILL.md
+  examples/
+    good-result.md
+    bad-result.md
+  evals/
+    cases.md
+  README.md
+```
 
 SKILL.md содержит рабочий протокол.
 
@@ -223,9 +229,7 @@ security;
 
 Данные клиентов владелец процесса + security + skill master
 
-Жизненный цикл skill
-
-идея -&gt; черновик
+Жизненный цикл skill идея -&gt; черновик
 
 -&gt; branch -&gt; PR/MR -&gt; review
 
@@ -239,9 +243,7 @@ security;
 
 Любой сотрудник может предложить:
 
-Мне нужен skill, который помогает делать X, потому что сейчас мы теряем Y,
-
-а хороший результат должен выглядеть как Z.
+Мне нужен skill, который помогает делать X, потому что сейчас мы теряем Y, а хороший результат должен выглядеть как Z.
 
 2. Черновик
 
@@ -255,9 +257,11 @@ security;
 
 Для skill создается ветка:
 
+```text
 skill/proposal-draft-quality-review
-
-skill/project-status-summary skill/legal-contract-risk-check
+skill/project-status-summary
+skill/legal-contract-risk-check
+```
 
 4. PR/MR
 
@@ -319,39 +323,45 @@ Review проверяет:
 
 Его помечают:
 
-status: deprecated replaced_by: new-skill-name
-
+```yaml
+status: deprecated
+replaced_by: new-skill-name
 reason: source of truth changed
+```
 
-Статусы skill
+Статусы skill:
 
-draft — черновик, не использовать в работе
-
-pilot — можно использовать ограниченной группой approved — утвержден для роли или контура
-
-deprecated — устарел, есть замена или причина вывода blocked — временно запрещен из-за риска
+| Статус | Значение |
+| --- | --- |
+| draft | Черновик, не использовать в работе |
+| pilot | Можно использовать ограниченной группой |
+| approved | Утвержден для роли или контура |
+| deprecated | Устарел, есть замена или причина вывода |
+| blocked | Временно запрещен из-за риска |
 
 Статус должен быть виден в SKILL.md или в реестре.
 
 Пример шапки SKILL.md
 
+```yaml
 ---
-
-name: proposal-draft status: approved
-
-version: 1.3.0 owner: sales-operations
-
-role: sales-manager process: incoming-demand
-
-source_of_truth: - CRM - proposal-templates
-
-- meeting-summary risk_level: medium
-
-reviewers: - skill-master
-
-- head-of-sales last_reviewed: 2026-05-19
-
+name: proposal-draft
+status: approved
+version: 1.3.0
+owner: sales-operations
+role: sales-manager
+process: incoming-demand
+source_of_truth:
+  - CRM
+  - proposal-templates
+  - meeting-summary
+risk_level: medium
+reviewers:
+  - skill-master
+  - head-of-sales
+last_reviewed: 2026-05-19
 ---
+```
 
 После шапки идет сам рабочий протокол.
 
@@ -382,15 +392,17 @@ reviewers: - skill-master
 Простой маршрут:
 
 1. Сотрудник пишет идею в форму, задачу или ассистенту.
-
-2. Ассистент помогает заполнить карточку skill. 3. Skill master проверяет структуру. 4. Владелец процесса подтверждает бизнес-смысл.
-
-5. Создается branch и PR/MR. 6. Review проверяет качество и безопасность.
-
-7. Skill проходит пилот. 8. После merge skill публикуется для роли или команды.
+2. Ассистент помогает заполнить карточку skill.
+3. Skill master проверяет структуру.
+4. Владелец процесса подтверждает бизнес-смысл.
+5. Создается branch и PR/MR.
+6. Review проверяет качество и безопасность.
+7. Skill проходит пилот.
+8. После merge skill публикуется для роли или команды.
 
 Шаблон PR/MR для skill
 
+```markdown
 # Новый / измененный skill
 
 ## Что меняется
@@ -414,6 +426,7 @@ reviewers: - skill-master
 ## Владелец skill
 
 ## План пилота или публикации
+```
 
 Правила merge
 

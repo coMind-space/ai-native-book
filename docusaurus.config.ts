@@ -50,10 +50,10 @@ const config: Config = {
   themeConfig: {
     image: 'img/social-card.svg',
     navbar: {
-      title: 'AI-Native Book',
+      title: 'Путь компании к AI-Native',
       logo: {
         alt: 'coMind',
-        src: 'img/logo-comind-wordmark.png',
+        src: 'img/logo-mark.svg',
       },
       items: [
         {
@@ -71,16 +71,17 @@ const config: Config = {
           items: [
             {label: 'Начать чтение', to: '/'},
             {label: 'Как обновлять книгу', to: '/community/update-process'},
+            {label: 'GitHub', href: 'https://github.com/coMind-space/ai-native-book'},
           ],
         },
         {
           title: 'coMind',
           items: [
-            {label: 'GitHub', href: 'https://github.com/coMind-space/ai-native-book'},
+            {label: 'comind.space', href: 'https://comind.space'},
           ],
         },
       ],
-      copyright: `coMind, ${new Date().getFullYear()}`,
+      copyright: `Путь компании к AI-Native, ${new Date().getFullYear()}`,
     },
     docs: {
       sidebar: {
