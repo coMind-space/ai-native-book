@@ -3,7 +3,7 @@ title: "Память компании"
 sidebar_label: "Глава 10"
 ---
 
-<figure className="book-figure">
+<figure className="book-figure" tabIndex={0}>
   <img src="/img/illustrations/chapter-10-memory.png" alt="Память компании и source of truth" />
   <figcaption>Иллюстрация. Память компании помогает ассистенту удерживать контекст, но source of truth остается главным.</figcaption>
 </figure>

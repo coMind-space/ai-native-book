@@ -22,6 +22,7 @@ const config: Config = {
       onBrokenMarkdownLinks: 'warn',
     },
   },
+  clientModules: ['./src/clientModules/sidebarCategoryLinks.js'],
 
   i18n: {
     defaultLocale: 'ru',

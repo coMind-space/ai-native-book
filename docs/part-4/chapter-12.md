@@ -3,7 +3,7 @@ title: "Первые 30 дней"
 sidebar_label: "Глава 12"
 ---
 
-<figure className="book-figure">
+<figure className="book-figure" tabIndex={0}>
   <img src="/img/illustrations/chapter-12-first-30-days.png" alt="Первые 30 дней AI-Native пилота" />
   <figcaption>Иллюстрация. Первые 30 дней: один контур, четыре недели, видимый результат.</figcaption>
 </figure>

@@ -3,7 +3,7 @@ title: "Новая операционная модель"
 sidebar_label: "Глава 4"
 ---
 
-<figure className="book-figure">
+<figure className="book-figure" tabIndex={0}>
   <img src="/img/illustrations/chapter-04-operating-model.png" alt="Операционная формула AI-Native контура" />
   <figcaption>Иллюстрация. Операционная формула: человек, ассистент, skill, source of truth, правила качества и контроль работают как один управляемый контур.</figcaption>
 </figure>

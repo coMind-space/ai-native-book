@@ -186,6 +186,25 @@ b,
 
 .breadcrumbs__link {
   border-radius: 999px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.breadcrumbs__item:not(.breadcrumbs__item--active) .breadcrumbs__link {
+  color: var(--book-terracotta-deep);
+  text-decoration: underline;
+}
+
+.breadcrumbs__item:not(.breadcrumbs__item--active) .breadcrumbs__link:hover {
+  background: rgba(216, 115, 82, 0.08);
+  color: var(--book-ink);
+  text-decoration: underline;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: rgba(216, 115, 82, 0.08);
+  color: var(--book-terracotta-deep);
+  text-decoration: none;
 }
 
 .theme-doc-toc-desktop {
@@ -328,6 +347,11 @@ b,
   margin: 0;
 }
 
+.book-figure:focus {
+  outline: 2px solid var(--book-terracotta);
+  outline-offset: 3px;
+}
+
 .book-figure figcaption {
   background: rgba(255, 247, 239, 0.9);
   border: 1px solid rgba(16, 17, 22, 0.16);
@@ -344,9 +368,22 @@ b,
   left: 0.75rem;
   line-height: 1.45;
   margin: 0;
+  opacity: 0;
   padding: 0.55rem 0.72rem;
+  pointer-events: none;
   position: absolute;
   right: 0.75rem;
+  transform: translateY(0.35rem);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.book-figure:hover figcaption,
+.book-figure:focus-within figcaption,
+.book-figure:focus figcaption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 [data-theme='dark'] .book-figure figcaption {
@@ -829,6 +866,19 @@ b,
     border: 0;
     border-radius: 0;
     border-top: 1px solid var(--book-line);
+    opacity: 1;
     position: static;
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .book-figure figcaption {
+    border: 0;
+    border-radius: 0;
+    border-top: 1px solid var(--book-line);
+    opacity: 1;
+    position: static;
+    transform: none;
   }
 }

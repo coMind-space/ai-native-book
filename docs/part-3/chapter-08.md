@@ -3,7 +3,7 @@ title: "Архитектура корпоративного ассистента
 sidebar_label: "Глава 8"
 ---
 
-<figure className="book-figure">
+<figure className="book-figure" tabIndex={0}>
   <img src="/img/illustrations/chapter-08-architecture.png" alt="Граница MCP между агентами и корпоративными системами" />
   <figcaption>Иллюстрация. Граница MCP: агенты работают через управляемый шлюз, а не держат прямые ключи к корпоративным системам.</figcaption>
 </figure>
