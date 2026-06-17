@@ -50,6 +50,23 @@ jobs:
         with:
           path: build
 
+      - name: Build root domain artifact
+        if: github.event_name == 'push'
+        env:
+          SITE_URL: https://book.my.comind.space
+          BASE_URL: /
+        run: |
+          rm -rf build
+          npm run build
+
+      - name: Upload root domain artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: book-root-build
+          path: build
+          retention-days: 7
+
   deploy:
     if: github.event_name == 'push'
     needs: build
