@@ -78,10 +78,10 @@ const config: Config = {
           title: 'coMind',
           items: [
             {label: 'comind.space', href: 'https://comind.space'},
+            {html: '<span class="footer__book-mark">Путь компании к AI-Native, 2026</span>'},
           ],
         },
       ],
-      copyright: `Путь компании к AI-Native, ${new Date().getFullYear()}`,
     },
     docs: {
       sidebar: {
