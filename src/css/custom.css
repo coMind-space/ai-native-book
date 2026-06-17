@@ -166,13 +166,31 @@ b,
   color: #101116;
 }
 
+.theme-doc-sidebar-container .menu__link.menu__link--active {
+  background: var(--book-terracotta) !important;
+  border-color: transparent;
+  color: #101116;
+}
+
 [data-theme='dark'] .menu__link--active {
   background: #f2ad95;
   color: #111114;
 }
 
+[data-theme='dark'] .theme-doc-sidebar-container .menu__link.menu__link--active {
+  background: #f2ad95 !important;
+  border-color: #f2ad95;
+  color: #111114;
+}
+
 [data-theme='dark'] .menu__link--active:hover {
   background: #ffd4c4;
+  color: #111114;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container .menu__link.menu__link--active:hover {
+  background: #ffd4c4 !important;
+  border-color: #ffd4c4;
   color: #111114;
 }
 
