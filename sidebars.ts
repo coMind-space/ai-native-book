@@ -52,6 +52,11 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
+      type: 'doc',
+      id: 'appendices/h-glossary',
+      label: 'Словарь терминов',
+    },
+    {
       type: 'category',
       label: 'Приложения',
       items: [
@@ -62,7 +67,6 @@ const sidebars: SidebarsConfig = {
         'appendices/e-skill-card',
         'appendices/f-document-skills',
         'appendices/g-first-30-days',
-        'appendices/h-glossary',
         'appendices/i-ai-native-checklist',
         'appendices/j-skills-in-git',
       ],
