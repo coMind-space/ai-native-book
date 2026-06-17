@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#fbfaf7"/>
-  <rect x="64" y="64" width="1072" height="502" rx="18" fill="#f0eee8" stroke="#ded9cf"/>
-  <text x="120" y="160" fill="#b75f38" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">coMind</text>
-  <text x="120" y="270" fill="#17212b" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700">Путь компании</text>
-  <text x="120" y="360" fill="#17212b" font-family="Segoe UI, Arial, sans-serif" font-size="72" font-weight="700">к AI-Native</text>
-  <text x="120" y="450" fill="#65717c" font-family="Segoe UI, Arial, sans-serif" font-size="34">Интерактивная книга о новой операционной модели</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Путь компании к AI-Native">
+  <rect width="1200" height="630" fill="#d87352"/>
+  <circle cx="1020" cy="130" r="255" fill="none" stroke="#fff7ef" stroke-width="18"/>
+  <circle cx="105" cy="530" r="22" fill="none" stroke="#fff7ef" stroke-width="7"/>
+  <text x="82" y="94" fill="#101116" font-family="Segoe UI, Aptos, sans-serif" font-size="30" font-weight="800">PLAYBOOK EDITION</text>
+  <text x="82" y="235" fill="#101116" font-family="Georgia, Cambria, serif" font-size="92" font-weight="700">Путь компании</text>
+  <text x="82" y="338" fill="#101116" font-family="Georgia, Cambria, serif" font-size="92" font-weight="700">к AI-Native</text>
+  <text x="82" y="430" fill="#101116" font-family="Segoe UI, Aptos, sans-serif" font-size="36" font-weight="700">Интерактивная книга о новой операционной модели</text>
+  <text x="145" y="543" fill="#101116" font-family="Segoe UI, Aptos, sans-serif" font-size="36" font-weight="800">coMind</text>
 </svg>
